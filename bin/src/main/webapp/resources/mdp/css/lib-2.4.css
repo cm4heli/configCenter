@@ -1,0 +1,274 @@
+﻿/*----------
+* 2016-01-27 v2.0
+* 2016-05-23 v2.1  添加去除IE下input自带的叉的样式
+* 2016-06-27 v2.2  添加箭头样式
+* 2016-08-16 v2.3  修改了body中font的样式
+* 2016-11-10 v2.4  删除了`height``width``display``cursor``overflow``font-family``font-style``position``vertical-align`
+                   精减了`margin``padding`值
+----------*/
+
+/*--------------------- reset CSS ---------------------*/
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form { margin:0;}
+body { color:#666; background:white; font:14px/1.5 "PingFang SC", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;}
+ul,ol,li { padding-left:0; list-style-type:none;}
+img { border:0; vertical-align:bottom;}
+input,textarea,select { font-size:12px; outline:none; border:none; margin:0; padding:0}
+input::-ms-clear{display:none;} /* 去除IE下input自带的叉 */
+h1,h2,h3,h4,h5,h6 { font-weight:normal;}
+h4,h5,h6{ font-size:1em;}
+a { font-size:12px; text-decoration:none;}
+
+
+/*--------------------- single CSS -----------------------*/
+/* margin */
+.m0 { margin:0;}
+.mt0 { margin-top:0;}
+.mr0 { margin-right:0;}
+.mb0 { margin-bottom:0;}
+.ml0 { margin-left:0;}
+.m5 { margin:5px;}
+.m5_0 { margin-top:5px; margin-bottom:5px;}
+.m0_5 { margin-right:5px; margin-left:5px;}
+.mt5 { margin-top:5px;}
+.mr5 { margin-right:5px;}
+.mb5 { margin-bottom:5px;}
+.ml5 { margin-left:5px;}
+.m10 { margin:10px;}
+.m10_0 { margin-top:10px; margin-bottom:10px;}
+.m0_10 { margin-right:10px; margin-left:10px;}
+.mt10 { margin-top:10px;}
+.mr10 { margin-right:10px;}
+.mb10 { margin-bottom:10px;}
+.ml10 { margin-left:10px;}
+.m15 { margin:15px;}
+.m15_0 { margin-top:15px; margin-bottom:15px;}
+.m0_15 { margin-right:15px; margin-left:15px;}
+.mt15 { margin-top:15px;}
+.mr15 { margin-right:15px;}
+.mb15 { margin-bottom:15px;}
+.ml15 { margin-left:15px;}
+.m20 { margin:20px;}
+.m20_0 { margin-top:20px; margin-bottom:20px;}
+.m0_20 { margin-right:20px; margin-left:20px;}
+.mt20 { margin-top:20px;}
+.mr20 { margin-right:20px;}
+.mb20 { margin-bottom:20px;}
+.ml20 { margin-left:20px;}
+.m25 { margin:25px;}
+.m25_0 { margin-top:25px; margin-bottom:25px;}
+.m0_25 { margin-right:25px; margin-left:25px;}
+.mt25 { margin-top:25px;}
+.mr25 { margin-right:25px;}
+.mb25 { margin-bottom:25px;}
+.ml25 { margin-left:25px;}
+.m30 { margin:30px;}
+.m30_0 { margin-top:30px; margin-bottom:30px;}
+.m0_30 { margin-right:30px; margin-left:30px;}
+.mr30 { margin-right:30px;}
+.mt30 { margin-top:30px;}
+.mb30 { margin-bottom:30px;}
+.ml30 { margin-left:30px;}
+.m50 { margin:50px;}
+.m50_0 { margin-top:50px; margin-bottom:50px;}
+.m0_50 { margin-right:50px; margin-left:50px;}
+.mr50 { margin-right:50px;}
+.mt50 { margin-top:50px;}
+.mb50 { margin-bottom:50px;}
+.ml50 { margin-left:50px;}
+
+/* padding */
+.p0 { padding:0;}
+.pt0 { padding-top:0;}
+.pr0 { padding-right:0;}
+.pb0 { padding-bottom:0;}
+.pl0 { padding-left:0;}
+.p5 { padding:5px;}
+.p5_0 { padding-top:5px; padding-bottom:5px;}
+.p0_5 { padding-right:5px; padding-left:5px;}
+.pt5 { padding-top:5px;}
+.pr5 { padding-right:5px;}
+.pb5 { padding-bottom:5px;}
+.pl5 { padding-left:5px;}
+.p10 { padding:10px;}
+.p10_0 { padding-top:10px; padding-bottom:10px;}
+.p0_10 { padding-right:10px; padding-left:10px;}
+.pt10 { padding-top:10px;}
+.pr10 { padding-right:10px;}
+.pb10 { padding-bottom:10px;}
+.pl10 { padding-left:10px;}
+.p15 { padding:15px;}
+.p15_0 { padding-top:15px; padding-bottom:15px;}
+.p0_15 { padding-right:15px; padding-left:15px;}
+.pt15 { padding-top:15px;}
+.pr15 { padding-right:15px;}
+.pb15 { padding-bottom:15px;}
+.pl15 { padding-left:15px;}
+.p20 { padding:20px;}
+.p20_0 { padding-top:20px; padding-bottom:20px;}
+.p0_20 { padding-right:20px; padding-left:20px;}
+.pt20 { padding-top:20px;}
+.pr20 { padding-right:20px;}
+.pb20 { padding-bottom:20px;}
+.pl20 { padding-left:20px;}
+.p30 { padding:30px;}
+.p30_0 { padding-top:30px; padding-bottom:30px;}
+.p0_30 { padding-right:30px; padding-left:30px;}
+.pt30 { padding-top:30px;}
+.pr30 { padding-right:30px;}
+.pb30 { padding-bottom:30px;}
+.pl30 { padding-left:30px;}
+.p50 { padding:50px;}
+.p50_0 { padding-top:50px; padding-bottom:50px;}
+.p0_50 { padding-right:50px; padding-left:50px;}
+.pt50 { padding-top:50px;}
+.pr50 { padding-right:50px;}
+.pb50 { padding-bottom:50px;}
+.pl50 { padding-left:50px;}
+
+/* border-color */
+.bd_c { border:1px solid #ccc;}
+.bd_d { border:1px solid #ddd;}
+.bd_e { border:1px solid #eee;}
+.bd_f { border:1px solid #fff;}
+.br_c { border-right:1px solid #ccc;}
+.bt_c { border-top:1px solid #ccc;}
+.bb_c { border-bottom:1px solid #ccc;}
+.bl_c { border-left:1px solid #ccc;}
+.bt_d { border-top:1px solid #ddd;}
+.br_d { border-right:1px solid #ddd;}
+.bl_d { border-left:1px solid #ddd;}
+.bb_d { border-bottom:1px solid #ddd;}
+.bt_e { border-top:1px solid #eee;}
+.br_e { border-right:1px solid #eee;}
+.bb_e { border-bottom:1px solid #eee;}
+.bl_e { border-left:1px solid #eee;}
+
+/* background-color */
+.bg_n { background:none;}
+.bg_wh { background-color:#fff;}
+.bg_fb { background-color:#fbfbfb;}
+.bg_fc { background-color:#fcfcfc;}
+.bg_f6 { background-color:#f6f6f6;}
+.bg_f9 { background-color:#f9f9f9;}
+.bg_f0 { background-color:#f0f0f0;}
+.bg_eb { background-color:#ebebeb;}
+.bg_e0 { background-color:#e0e0e0;}
+
+/* safe color */
+.g0 { color:#000;}
+.g2 { color:#222;}
+.g3 { color:#333;}
+.g4 { color:#444;}
+.g6 { color:#666;}
+.g8 { color:#888;}
+.g9 { color:#999;}
+.gc { color:#ccc;}
+.gaf { color:#afafaf;}
+.wh { color:white;}
+
+/* font-size */
+.f0 { font-size:0;}
+.f12 { font-size:12px;}
+.f13 { font-size:13px;}
+.f14 { font-size:14px;}
+.f16 { font-size:16px;}
+.f18 { font-size:18px;}
+.f20 { font-size:20px;}
+.f24 { font-size:24px;}
+.f30 { font-size:30px;}
+.f36 { font-size:36px;}
+
+/* position */
+.rel{position:relative;}
+.abs{position:absolute;}
+
+/* text-align */
+.tc { text-align:center;}
+.tr { text-align:right;}
+.tl { text-align:left;}
+
+/* float */
+.l { float:left;}
+.r { float:right;}
+
+/* clear */
+.cl{clear:both;}
+
+/*z-index*/
+.zx0 { z-index:0;}
+.zx1 { z-index:1;}
+.zx2 { z-index:2;}
+.zx3 { z-index:3;}
+.zx4 { z-index:4;}
+.zx5 { z-index:5;}
+
+
+/*--------------------- multiply CSS ---------------------*/
+/* 块状元素水平居中 */
+.auto { margin-right:auto; margin-left:auto;}
+
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after { content: ""; display: table;}
+.clearfix:after { clear: both;}
+.clearfix { *zoom: 1;}
+
+/* 单行文字溢出省略号显示 */
+.ell { text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+/* 中英文两端对齐 */
+.tj { text-align:justify; text-justify:inter-ideagraph; word-break:break-all;}
+
+/* css3过渡动画效果 */
+.trans{
+	transition:all .3s;
+	-moz-transition:all .3s;
+	-webkit-transition:all .3s;
+	-o-transition:all .3s;
+}
+
+/* 四角绝对定位 */
+.abs_tr { position:absolute; top:0; right:0;}
+.abs_tr_1 { position:absolute; top:-1px; right:-1px;}
+.abs_br { position:absolute; right:0; bottom:0;}
+.abs_br_1 { position:absolute; right:-1px; bottom:-1px;}
+.abs_bl { position:absolute; bottom:0; left:0;}
+.abs_bl_1 { position:absolute; bottom:-1px; left:-1px;}
+.abs_tl { position:absolute; left:0; top:0;}
+.abs_tl_1 { position:absolute; left:-1px; top:-1px;}
+
+/* inline-block与float等宽列表 */
+.inline_box { font-size:1em; letter-spacing:-.25em; font-family:Arial;}
+.inline_two,
+.inline_three,
+.inline_four,
+.inline_five,
+.inline_six,
+.inline_any { display:inline-block; *display:inline; letter-spacing:0; vertical-align:top; *zoom:1;}
+.float_two,
+.float_three,
+.float_four,
+.float_five,
+.float_six { float:left;}
+.inline_two,
+.float_two { width:49.9%;}
+.inline_three,
+.float_three { width:33.3%;}
+.inline_four,
+.float_four { width:24.9%;}
+.inline_five,
+.float_five { width:19.9%;}
+.inline_six,
+.float_six { width:16.6%;}
+.inline_fix { display:inline-block; width:100%; height:0; overflow:hidden;}
+
+/* arrows */
+/* 以下只是基本样式，大小和颜色需按具体情况调整 */
+.arrup,
+.arrright,
+.arrdn,
+.arrleft { width:0; height:0; overflow:hidden; border-width:6px; border-color:transparent; border-style:dashed;}
+.arrup { border-bottom-color:#000; border-bottom-style:solid;}
+.arrright { border-left-color:#000; border-left-style:solid;}
+.arrdn { border-top-color:#000; border-top-style:solid;}
+.arrleft { border-right-color:#000; border-right-style:solid;}

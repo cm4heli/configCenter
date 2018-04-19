@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.imgShift { position:absolute; top:0; left:0; z-index:1; width:297px; height:198px;}
+
+.anythingSlider { position:relative; height: 198px; overflow:hidden;}
+.anythingSlider .wrapper { width:297px; height: 198px; overflow:hidden; position: absolute; top: 0; left: 0; }
+.anythingSlider .wrapper ul { width: 99999px; list-style: none; position: absolute; top: 0; left: 0; background: #eee; margin: 0; }
+.anythingSlider ul li { position:relative; display: block; float:left; padding: 0; width:297px; height: 198px; margin: 0 auto;}
+.anythingSlider .arrow { display: block; width:25px; height:45px; position: absolute; top: 77px; cursor: pointer; }
+.anythingSlider .forward { background:url(../images/imgShift_arrs.png) -25px 0 no-repeat; right: 0; }
+.anythingSlider .forward:hover { background-position:-25px -45px;}
+.anythingSlider .back { background:url(../images/imgShift_arrs.png) 0 0 no-repeat; left: 0; }
+.anythingSlider .back:hover { background-position:0 -45px;}
+
+#thumbNav { position: absolute; top: 200px;}

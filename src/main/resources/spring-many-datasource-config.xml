@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+	
+	<bean id="routeManagerContainer"
+		class="com.digitalchina.ldp.app.smp.common.util.RouteManagerContainer">
+		<property name="routeManagers">
+			<list>
+				<bean class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+					<property name="serviceUrl" value="rmi://${publish.ip}:9999/rmiRouteManager" />
+					<property name="serviceInterface"
+						value="com.digitalchina.ldp.app.smp.service.RmiRouteManager" />
+						<property name="lookupStubOnStartup" value="false"/>
+						<property name="refreshStubOnConnectFailure" value="true"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<!--框架基础库 -->
+	<!-- 
+	 <bean id="myStatLogger" class="com.digitalchina.ldp.common.util.MyStatLogger" />
+	  -->
+	<bean id="mdDatasource" class="com.alibaba.druid.pool.DruidDataSource">
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="initialSize" value="${initialSize}" />
+		<property name="minIdle" value="${minIdle}" />
+		<property name="maxActive" value="${maxActive}" />
+		<property name="maxWait" value="${maxWait}" />
+		<property name="timeBetweenEvictionRunsMillis" value="${timeBetweenEvictionRunsMillis}" />
+		<property name="minEvictableIdleTimeMillis" value="${minEvictableIdleTimeMillis}" />
+		<property name="validationQuery" value="${validationQuery}" />
+		<property name="testWhileIdle" value="${testWhileIdle}" />
+		<property name="testOnBorrow" value="${testOnBorrow}" />
+		<property name="testOnReturn" value="${testOnReturn}" />
+		<property name="poolPreparedStatements" value="${poolPreparedStatements}" />
+		<property name="name" value="cloudservice" />
+		<property name="filters" value="config" />
+	</bean>
+</beans>
